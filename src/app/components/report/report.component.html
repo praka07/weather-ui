@@ -1,0 +1,16 @@
+<div class="login-container d-flex align-items-center justify-content-center">
+    <div class="login-form text-center">
+        <div class="card border-success">
+            <div class="card-header">
+                <h4> City Name : {{cityName}}</h4>
+            </div>
+            <div class="card-body">
+                Temperature: <strong>{{report?.main?.temp}}</strong>        
+                <br>Pressure: <strong>{{report?.main?.pressure}}</strong>        
+                <br>Humidity: <strong>{{report?.main?.humidity}}</strong>        
+                <br>Climate: <strong>{{report?.weather![0].main}}</strong>        
+        </div>
+
+        <button type="submit" class="btn mt-5 btn-custom btn-block text-uppercase rounded-pill btn-lg">Back</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="login-container d-flex align-items-center justify-content-center">
+    <form class="login-form text-center" #loginForm="ngForm" (ngSubmit)="checkClimate()" autocomplete="off"> 
+        <h2>Weather Man</h2>   
+        <div class="form-group">
+            <input type="text" class="form-control rounded-pill form-control-lg" placeholder="Enter City Name" [(ngModel)]="input.name" name="cityName" #cityName="ngModel" required>
+            <span class="help-block text-danger" *ngIf="cityName.errors?.required && cityName.touched">
+                City Name is required
+              </span>
+        </div>      
+    
+        <button type="submit" [disabled]="loginForm.invalid" class="btn mt-5 btn-custom btn-block text-uppercase rounded-pill btn-lg">Check Climate</button>
+       
+    </form>
+</div>
